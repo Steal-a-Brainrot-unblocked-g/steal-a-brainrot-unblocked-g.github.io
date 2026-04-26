@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "Subway Surfers",
+    "category": "Action",
+    "slug": "subway-surfers",
+    "description": "Play Subway Surfers unblocked online.",
+    "tags": ["brainrot", "unblocked games", "action"]
+  },
+  {
+    "id": 2,
+    "title": "Moto X3M",
+    "category": "Racing",
+    "slug": "moto-x3m",
+    "description": "Best bike racing game unblocked.",
+    "tags": ["racing", "skill", "webgl"]
+  }
+]
