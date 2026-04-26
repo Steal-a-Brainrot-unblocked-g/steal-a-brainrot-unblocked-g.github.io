@@ -3,10 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Play Steal a Brainrot Unblocked | Tech Engine v3</title>
-    <meta name="description" content="Play Steal a Brainrot unblocked online for free. Skip the firewall with our secure, fast-loading version. Works perfectly on Chromebooks, mobile, and desktop.">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <link rel="canonical" href="https://steal-a-brainrot-unblocked-g.github.io/" />
+    <title>Steal a Brainrot Unblocked | Tech Engine v3</title>
+    <meta name="description" content="Play Steal a Brainrot unblocked on any school Chromebook. Access the official Unblocked Games G Plus version with no lag, full screen, and instant loading.">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';">
     
     <style>
@@ -16,13 +14,14 @@
             --text: #ffffff; 
             --card: #151515; 
             --border: #333; 
+            --accent: #00e5ff; /* Added for highlighted text */
         }
         body { 
             background: var(--dark); 
             color: var(--text); 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
             margin: 0; 
-            line-height: 1.6; 
+            line-height: 1.8; 
         }
         #app-shell { 
             display: flex; 
@@ -30,7 +29,7 @@
             min-height: 100vh; 
         }
         
-        /* Header Search UI */
+        /* Header UI */
         header { 
             padding: 20px; 
             border-bottom: 1px solid var(--border); 
@@ -57,14 +56,13 @@
 
         /* Main Content Wrappers */
         .page-container {
-            max-width: 1000px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 30px 20px;
+            padding: 40px 20px;
             width: 100%;
             box-sizing: border-box;
         }
 
-        /* Buttons & Tags */
         .btn { 
             padding: 10px 20px; 
             background: #222; 
@@ -79,96 +77,98 @@
             background: var(--primary); 
             border-color: var(--primary); 
         }
-        .tag { 
-            display: inline-block; 
-            padding: 3px 8px; 
-            background: #2a2a2a; 
-            color: #aaa; 
-            border-radius: 4px; 
-            font-size: 0.75rem; 
-            margin-top: 10px; 
-            margin-right: 5px; 
-        }
 
-        /* Game Iframe Integration */
-        .game-wrapper {
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 30px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-            position: relative;
-        }
-        .game-wrapper::before { 
-            content: ''; 
-            position: absolute; 
-            top: 0; 
-            left: 0; 
-            width: 4px; 
-            height: 100%; 
-            background: var(--primary); 
-            border-radius: 8px 0 0 8px;
-        }
-        .iframe-container {
-            position: relative;
-            width: 100%;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-            background: #000;
-            border-radius: 4px;
-            overflow: hidden;
-            margin-top: 15px;
-        }
-        .iframe-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        /* SEO & Article Integration */
-        .seo-content {
+        /* Article Integration Styling */
+        article {
             background: #0f0f0f;
-            padding: 30px;
+            padding: 40px;
             border-radius: 8px;
             border: 1px solid var(--border);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
-        .seo-content h2 {
-            color: var(--primary);
-            margin-top: 0;
-            border-bottom: 1px solid #333;
-            padding-bottom: 10px;
+        h1 { 
+            margin: 0 0 10px 0; 
+            font-size: 2.5rem; 
+            letter-spacing: -1px; 
+            color: var(--text);
         }
-        .seo-content h3 {
-            color: #ddd;
-            margin-top: 25px;
-        }
-        .seo-content p {
-            color: #aaa;
-            font-size: 1.05rem;
-        }
-
-        /* Cocoon Links / Strategy Guide Links */
-        .cocoon-links {
-            margin-top: 30px;
-            padding: 20px;
-            background: var(--card);
-            border-radius: 5px;
-            border: 1px dashed #444;
-        }
-        .cocoon-links a {
-            color: #7bed9f;
-            text-decoration: none;
-            display: block;
-            margin-bottom: 10px;
+        .meta-data {
+            color: #666;
             font-family: monospace;
-            transition: 0.2s;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border);
         }
-        .cocoon-links a:hover {
+        h2 { 
+            color: var(--primary); 
+            font-size: 1.8rem; 
+            margin-top: 40px; 
+            border-bottom: 1px dashed var(--border); 
+            padding-bottom: 10px; 
+        }
+        h3 { 
+            font-size: 1.3rem; 
+            margin-top: 30px; 
+            color: #ddd; 
+        }
+        p { 
+            margin-bottom: 25px; 
+            font-size: 1.05rem; 
+            color: #ccc;
+        }
+        ul { 
+            margin-bottom: 25px; 
+            padding-left: 20px; 
+            list-style-type: square; 
+            color: #ccc;
+        }
+        li { 
+            margin-bottom: 12px; 
+        }
+        
+        /* Dark Theme Sidebar / Pro-Tip Box */
+        .sidebar {
+            background-color: #151515;
+            border-left: 4px solid var(--primary);
+            padding: 25px;
+            margin: 35px 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
+        }
+        .sidebar strong {
             color: var(--primary);
-            padding-left: 5px;
+            font-family: monospace;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Dark Theme Keyboard Keys */
+        .kbd-key {
+            background-color: #222;
+            border-radius: 4px;
+            border: 1px solid #444;
+            border-bottom: 3px solid #111;
+            box-shadow: 0 2px 0 rgba(0,0,0,0.2);
+            color: var(--primary);
+            display: inline-block;
+            font-size: 0.85em;
+            font-weight: 700;
+            line-height: 1;
+            padding: 4px 8px;
+            white-space: nowrap;
+            font-family: monospace;
+        }
+        
+        .highlight { 
+            font-weight: bold; 
+            color: var(--accent); 
+        }
+        hr { 
+            border: 0; 
+            height: 1px; 
+            background: var(--border); 
+            margin: 40px 0; 
         }
 
         /* Footer */
@@ -183,23 +183,12 @@
             background: #0a0a0a; 
         }
     </style>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "TechEngine v3: Steal a Brainrot",
-      "operatingSystem": "All",
-      "applicationCategory": "GameApplication",
-      "author": { "@type": "Organization", "name": "TechEngine Proxy" }
-    }
-    </script>
 </head>
 <body>
 
     <div id="app-shell">
         <header>
-            <h1 style="margin: 0; font-weight: 800; letter-spacing: -1px; cursor: pointer;">TechEngine<span style="color:var(--primary)">.v3</span></h1>
+            <h1 style="margin: 0; font-weight: 800; letter-spacing: -1px; font-size: 2rem;">TechEngine<span style="color:var(--primary)">.v3</span></h1>
             <div class="search-box">
                 <input type="text" id="mainSearch" placeholder="> Execute query (Games, WebGL, Guides)..." autocomplete="off">
             </div>
@@ -207,48 +196,12 @@
 
         <main id="main-content">
             <div class="page-container">
-                <button class="btn" style="margin-bottom: 20px;">← Back to Hub</button>
+                <button class="btn" onclick="history.back()" style="margin-bottom: 20px;">← Back to Hub</button>
 
-                <div class="game-wrapper">
-                    <h2 style="margin: 0; color: var(--text); font-size: 1.8rem;">Steal a Brainrot</h2>
-                    <p style="margin: 5px 0 0 0; color: #888; font-family: monospace;">> Status: WebGL Canvas Mounted | <span style="color: #4CAF50;">Secure Connection</span></p>
-                    
-                    <div class="iframe-container">
-                        <iframe src="game-file-path.html" title="Steal a Brainrot Game" allowfullscreen="true" scrolling="no"></iframe>
-                    </div>
-                    
-                    <div style="margin-top: 15px;">
-                        <span class="tag">#Brainrot</span>
-                        <span class="tag">#Unblocked</span>
-                        <span class="tag">#60FPS</span>
-                    </div>
-                </div>
+                <article>
+                    <h1>Steal a Brainrot Unblocked</h1>
+                    <div class="meta-data">> Author: System_Admin | Target: Chromebook Optimization | Status: Verified Working</div>
 
-                <div class="seo-content">
-                    <h2>> Technical Logs & Network Strategy</h2>
-                    
-                    <h3 style="color: var(--primary);">Play Steal a Brainrot Game Unblocked Anywhere</h3>
-                    <p>Welcome to the official home of <strong>Steal a Brainrot unblocked</strong>. Whether you are using a school Chromebook or browsing from work, our optimized TechEngine GitHub-hosted version ensures you can play without encountering annoying network restrictions or lag.</p>
+                    <p>Look, we’ve all been there. You’re sitting in the back of a painfully dry history lecture, staring at a locked-down Chromebook that feels more like a digital prison than an actual computer. You just want to kill some time. But the school firewall is acting like it’s guarding top-secret government files. It’s frustrating, right?</p>
 
-                    <h3>Why This Architecture Works on Classroom 6x</h3>
-                    <p>Most educational firewalls block standard gaming sites. Because this version of the <em>unblocked steal a brainrot game</em> is securely hosted, it bypasses typical packet inspections. Enjoy smooth, 60FPS gameplay directly in your browser without needing to download sketchy APKs or use slow proxies.</p>
-
-                    <div class="cocoon-links">
-                        <h3 style="color: var(--primary); margin-top: 0; border-bottom: 1px solid #333; padding-bottom: 10px;">> Encrypted Guides & Nodes</h3>
-                        <a href="/chromebook-bypass.html">> [Node 01] How to Play Steal a Brainrot on a School Chromebook</a>
-                        <a href="/top-strategies.html">> [Node 02] Steal a Brainrot: Top 5 Strategies to Beat Every Level</a>
-                        <a href="/g-plus-vs-6x.html">> [Node 03] Unblocked Games G Plus vs. Classroom 6x</a>
-                        <a href="/fixing-lag.html">> [Node 04] Fixing Steal a Brainrot Lag: Optimization Tips</a>
-                    </div>
-                </div>
-            </div>
-        </main>
-
-        <footer>
-            <div>Status: <span id="api-status">Kernel Verified <span style='color:#4CAF50'>[WASM: Online]</span></span> | Client: <span id="client-info">Desktop / Secure</span> | Network: GitHub Edge</div>
-            <div style="margin-top: 10px;">&copy; 2026 Steal a Brainrot Unblocked Games. For educational and testing purposes.</div>
-        </footer>
-    </div>
-
-</body>
-</html>
+                    <p>I’ve spent the last decade digging through gaming workarounds, and honestly, school IT departments are getting smarter by the day. But where there is a bored student
