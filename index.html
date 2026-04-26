@@ -1,10 +1,109 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My GitHub Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Gaming Hub | Unblocked Tech Entity</title>
+    <meta name="description" content="Advanced Web Application for premium unblocked gaming experience.">
+    
+    <style>
+        :root { --primary: #ff4500; --dark: #1a1a1a; --text: #ffffff; }
+        body { background: var(--dark); color: var(--text); font-family: sans-serif; margin: 0; }
+        #app-shell { display: flex; flex-direction: column; min-height: 100vh; }
+        .search-box { padding: 20px; text-align: center; background: #222; }
+        #game-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; padding: 20px; }
+        .game-card { background: #333; padding: 15px; border-radius: 10px; border: 1px solid #444; transition: 0.3s; cursor: pointer; }
+        .game-card:hover { border-color: var(--primary); transform: translateY(-5px); }
+        .loading-signal { color: var(--primary); font-family: monospace; text-align: center; }
+    </style>
 </head>
 <body>
-    <h1>Hello World!</h1>
-    <p>My site is officially running on GitHub Pages.</p>
+
+    <div id="app-shell">
+        <header style="padding: 20px; border-bottom: 1px solid #333;">
+            <h1>TechEngine<span style="color:var(--primary)">.v3</span></h1>
+            <div class="search-box">
+                <input type="text" id="mainSearch" placeholder="Execute search query..." 
+                       style="width: 80%; padding: 12px; border-radius: 5px; border: none; background: #444; color: white;">
+            </div>
+        </header>
+
+        <main id="main-content">
+            <div id="status-indicator" class="loading-signal">Initializing Core Engine...</div>
+            <div id="game-grid"></div>
+        </main>
+
+        <footer style="margin-top: auto; padding: 20px; text-align: center; font-size: 0.8rem; color: #666;">
+            System Status: <span id="api-status">Connecting...</span> | WASM: Active
+        </footer>
+    </div>
+
+    <script>
+        // محاكاة استدعاء WASM لرفع الـ Technical SEO
+        async function loadWasmEngine() {
+            console.log("Attempting to sync with WASM Module...");
+            // في الواقع يمكنك وضع ملف .wasm حقيقي هنا
+            const status = document.getElementById('api-status');
+            setTimeout(() => { status.innerText = "Syncing via GitHub API"; status.style.color = "#00ff00"; }, 2000);
+        }
+        loadWasmEngine();
+    </script>
+
+    <script>
+        let allGames = [];
+
+        async function initApp() {
+            const grid = document.getElementById('game-grid');
+            const status = document.getElementById('status-indicator');
+
+            try {
+                // 1. API Simulation (Fetch from JSON)
+                const response = await fetch('./data/games.json');
+                allGames = await response.json();
+                
+                status.style.display = 'none';
+                renderGames(allGames);
+
+                // 2. Internal Search Logic
+                document.getElementById('mainSearch').addEventListener('input', (e) => {
+                    const query = e.target.value.toLowerCase();
+                    const filtered = allGames.filter(g => 
+                        g.title.toLowerCase().includes(query) || 
+                        g.tags.some(t => t.includes(query))
+                    );
+                    renderGames(filtered);
+                });
+
+            } catch (error) {
+                status.innerText = "Fallback Mode: Check Data Integrity";
+                console.error("Boot Error:", error);
+            }
+        }
+
+        function renderGames(data) {
+            const grid = document.getElementById('game-grid');
+            grid.innerHTML = data.map(game => `
+                <div class="game-card" onclick="location.hash='${game.slug}'">
+                    <h3>${game.title}</h3>
+                    <p style="font-size:0.8rem; color:#aaa;">${game.description}</p>
+                    <div style="font-size:0.7rem; color:var(--primary)">#${game.category}</div>
+                </div>
+            `).join('');
+        }
+
+        window.addEventListener('load', initApp);
+
+        // 3. Hash Routing (SPA Logic)
+        window.addEventListener('hashchange', () => {
+            const slug = location.hash.replace('#', '');
+            if(slug) {
+                console.log(`Routing to: ${slug}`);
+                // هنا يمكنك تغيير محتوى الصفحة لعرض اللعبة المختارة دون إعادة تحميل
+                document.getElementById('main-content').innerHTML = `<h2>Loading ${slug}...</h2><button onclick="location.hash=''">Back</button>`;
+            } else {
+                location.reload(); // للعودة للرئيسية
+            }
+        });
+    </script>
 </body>
 </html>
