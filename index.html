@@ -20,6 +20,19 @@
     <h2 style="color: var(--primary)">Technical Logs & Guides</h2>
     <div id="articles-grid" style="display: grid; gap: 15px;"></div>
 </section>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Tech Games Article Hub",
+  "description": "Technical insights into browser-based gaming architecture.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "TechEngine"
+  }
+}
+</script>
 </head>
 <body>
 
@@ -51,6 +64,30 @@
             setTimeout(() => { status.innerText = "Syncing via GitHub API"; status.style.color = "#00ff00"; }, 2000);
         }
         loadWasmEngine();
+        async function loadArticles() {
+    const articlesGrid = document.getElementById('articles-grid');
+    try {
+        const res = await fetch('./data/articles.json');
+        const articles = await res.json();
+        
+        articlesGrid.innerHTML = articles.map(post => `
+            <article class="article-card" style="background:#252525; padding:15px; border-radius:5px; cursor:pointer" 
+                     onclick="location.hash='article/${post.id}'">
+                <h3 style="margin:0">${post.title}</h3>
+                <p style="color:#888; font-size:0.9rem">${post.excerpt}</p>
+                <small style="color:var(--primary)">${post.date}</small>
+            </article>
+        `).join('');
+    } catch (err) {
+        console.log("Article Engine Offline");
+    }
+}
+
+// استدعِ الدالة عند تشغيل التطبيق
+window.addEventListener('load', () => {
+    initApp();
+    loadArticles();
+});
 
 
         // كود استدعاء محرك الـ WASM لرفع الـ Technical Authority
