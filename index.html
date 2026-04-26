@@ -138,22 +138,33 @@
             renderArticles(filteredArticles);
         });
 
-        // الـ Routing الخاص بالـ SPA
-        window.addEventListener('hashchange', () => {
-            const hash = location.hash;
-            if(!hash) { location.reload(); return; }
-            
-            const [type, slug] = hash.replace('#', '').split('/');
-            const main = document.getElementById('main-content');
-            
+     window.addEventListener('hashchange', async () => {
+    const hash = location.hash;
+    if(!hash) { location.reload(); return; }
+    
+    const [type, slug] = hash.replace('#', '').split('/');
+    const main = document.getElementById('main-content');
+
+    if(type === 'article') {
+        main.innerHTML = `<div class="loading-signal">Fetching Knowledge Asset...</div>`;
+        try {
+            const res = await fetch(`./data/articles/${slug}.json`);
+            const post = await res.json();
             main.innerHTML = `
-                <div style="padding:40px; text-align:center;">
-                    <h2 style="color:var(--primary)">Loading ${type}: ${slug}...</h2>
-                    <p>Executing Secure Fetch via GitHub API</p>
-                    <button onclick="location.hash=''" style="padding:10px 20px; background:var(--primary); border:none; color:white; border-radius:5px; cursor:pointer">Back to Hub</button>
+                <div style="padding:40px; max-width:800px; margin:auto;">
+                    <h1 style="color:var(--primary)">${post.title}</h1>
+                    <p style="color:#ccc; font-size:1.1rem; line-height:1.8;">${post.content}</p>
+                    <hr style="border:0; border-top:1px solid #333; margin:20px 0;">
+                    <div style="color:var(--primary)">Tags: ${post.tags.join(', ')}</div>
+                    <br>
+                    <button onclick="location.hash=''" style="padding:10px 20px; background:#333; border:none; color:white; border-radius:5px; cursor:pointer">← Return to Hub</button>
                 </div>
             `;
-        });
+        } catch (e) {
+            main.innerHTML = `<h2>Error: Asset not found in /data/articles/</h2>`;
+        }
+    }
+});
 
         // التشغيل عند التحميل
         window.addEventListener('DOMContentLoaded', () => {
