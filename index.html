@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#1a1a1a">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>Pro Gaming Hub | Tech Engine v3</title>
     <meta name="description" content="Advanced Web Application for premium unblocked gaming experience and technical SEO logs.">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:;">
@@ -10,11 +13,25 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "TechEngine v3",
-      "operatingSystem": "All",
-      "applicationCategory": "GameApplication",
-      "author": { "@type": "Organization", "name": "TechEngine Proxy" }
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "@id": "https://tech-engine-v3.local/#app",
+          "name": "TechEngine v3",
+          "operatingSystem": "All",
+          "applicationCategory": "GameApplication",
+          "browserRequirements": "Requires WebAssembly support",
+          "softwareVersion": "3.1.0"
+        },
+        {
+          "@type": "TechArticle",
+          "@id": "https://tech-engine-v3.local/#article",
+          "headline": "Nuclear SEO Strategies 2026",
+          "description": "Technical guide on bypassing search filters using WASM and Application state simulation.",
+          "author": { "@type": "Organization", "name": "TechEngine Proxy" },
+          "isPartOf": { "@id": "https://tech-engine-v3.local/#app" }
+        }
+      ]
     }
     </script>
 
@@ -36,7 +53,7 @@
         
         .loading-signal { color: var(--primary); font-family: monospace; text-align: center; padding: 40px; font-size: 1.2rem; }
         
-        /* تنسيق المقال الثابت لـ SEO */
+        /* تنسيق المقال الثابت المدمج بأكواد المايكروداتا */
         .seo-article-container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
         .static-article { background: #0f0f0f; padding: 40px; border-radius: 12px; border: 1px solid var(--border); border-left: 4px solid var(--primary); }
         .static-article h1 { color: var(--primary); font-size: 2.2rem; margin-top: 0; margin-bottom: 5px; }
@@ -45,53 +62,60 @@
         footer { margin-top: auto; padding: 20px; text-align: center; font-size: 0.8rem; color: #666; border-top: 1px solid var(--border); font-family: monospace; background: #0a0a0a; }
         .btn { padding: 10px 20px; background: #222; border: 1px solid #444; color: white; border-radius: 5px; cursor: pointer; transition: 0.2s; font-family: inherit; margin-bottom: 20px;}
         .btn:hover { background: var(--primary); border-color: var(--primary); }
-        .tag { display: inline-block; padding: 3px 8px; background: #2a2a2a; color: #aaa; border-radius: 4px; font-size: 0.75rem; margin-top: 10px; margin-right: 5px; }
     </style>
 </head>
 <body>
 
-    <div id="app-shell">
-        <header>
+    <div id="app-shell" role="application" aria-label="TechEngine Gaming Interface">
+        <header role="banner">
             <h1 style="margin: 0; font-weight: 800; letter-spacing: -1px;">TechEngine<span style="color:var(--primary)">.v3</span></h1>
             <div class="search-box">
-                <input type="text" id="mainSearch" placeholder="> Execute query (Games)..." autocomplete="off">
+                <input type="text" id="mainSearch" placeholder="> Execute query (Games)..." autocomplete="off" aria-label="Search Database">
             </div>
         </header>
 
-        <main id="main-content">
+        <main id="main-content" role="main">
             
-            <div id="home-view">
+            <div id="home-view" aria-live="polite">
                 <div id="status-indicator" class="loading-signal">> Initializing Core Engine & Fetching Nodes...</div>
                 
-                <div id="game-grid"></div>
+                <div id="game-grid" role="grid"></div>
 
-                <section class="seo-article-container">
-                    <article class="static-article">
-                        <h1>Nuclear SEO Strategies 2026</h1>
-                        <p style="color: #666; font-family: monospace; border-bottom: 1px solid #333; padding-bottom: 15px; margin-top: 0;">System Log | Author: Tech Admin | Ver: 3.1</p>
+                <section class="seo-article-container" aria-labelledby="article-heading">
+                    <article class="static-article" itemscope itemtype="http://schema.org/TechArticle">
+                        <meta itemprop="inLanguage" content="en-US">
                         
-                        <p>In 2026, standard SEO is no longer enough. To bypass automatic de-indexing filters, your site must behave like a technical entity.</p>
+                        <h1 id="article-heading" itemprop="headline">Nuclear SEO Strategies 2026</h1>
                         
-                        <h2 style="color: var(--primary);">System Architecture</h2>
-                        <p>By implementing WebAssembly (WASM) signals, we prove to Google that our 'Unblocked Games' site is a sophisticated application, not just a static HTML farm.</p>
+                        <p style="color: #666; font-family: monospace; border-bottom: 1px solid #333; padding-bottom: 15px; margin-top: 0;">
+                            System Log | Author: <span itemprop="author">Tech Admin</span> | Ver: 3.1
+                            <meta itemprop="datePublished" content="2026-04-26">
+                        </p>
                         
-                        <p>هنا تضع مقالك الطويل بالكامل. جوجل يراه الآن كجزء من تطبيق ويب متطور!</p>
+                        <div itemprop="articleBody">
+                            <p>In 2026, standard SEO is no longer enough. To bypass automatic de-indexing filters, your site must behave like a technical entity.</p>
+                            
+                            <h2 style="color: var(--primary);">System Architecture</h2>
+                            <p>By implementing WebAssembly (WASM) signals, we prove to Google that our 'Unblocked Games' site is a sophisticated application, not just a static HTML farm.</p>
+                            
+                            <p>هنا تضع مقالك الطويل. الكود المحيط به (Microdata) يجعله يبدو كدليل تقني مدمج داخل برمجية معقدة، وهو ما يعطيه موثوقية عالية جداً (High Authority) لدى جوجل.</p>
+                        </div>
                     </article>
                 </section>
             </div>
 
-            <div id="detail-view" style="display: none; padding: 40px 20px; max-width: 1000px; margin: 0 auto; width: 100%; box-sizing: border-box;">
+            <div id="detail-view" style="display: none; padding: 40px 20px; max-width: 1000px; margin: 0 auto; width: 100%; box-sizing: border-box;" aria-hidden="true">
                 <button class="btn" onclick="location.hash=''">← Terminate Session</button>
                 <div style="text-align:center; padding: 50px; background: #111; border: 1px solid #333; border-radius: 8px;">
                     <h1 id="game-title-display" style="color:var(--primary);">> Initializing Environment</h1>
-                    <p style="color:#888; font-family: monospace;">WebGL Canvas / Game Iframe will mount here.</p>
+                    <p style="color:#888; font-family: monospace;">WebGL Canvas mounts here.</p>
                     <div class="loading-signal">Awaiting Payload...</div>
                 </div>
             </div>
 
         </main>
 
-        <footer>
+        <footer role="contentinfo">
             Status: <span id="api-status">Connecting...</span> | Client: <span id="client-info">Scanning...</span> | Network: GitHub Edge
         </footer>
     </div>
@@ -102,7 +126,7 @@
         const detailView = document.getElementById('detail-view');
         const statusIndicator = document.getElementById('status-indicator');
 
-        // 1. نظام التشخيص (WASM + Client Info) لإبهار عناكب البحث
+        // 1. نظام إشارات WASM الوهمية وتحديد بيئة العميل (تثبت لجوجل أننا تطبيق)
         async function bootSystem() {
             try {
                 const minimalWasmBytes = new Uint8Array([0, 97, 115, 109, 1, 0, 0, 0]);
@@ -122,7 +146,7 @@
             }
         }
 
-        // 2. جلب الألعاب (Games Only)
+        // 2. جلب الألعاب (Dynamic Fetching) يعزز من موثوقية التطبيق
         async function initData() {
             try {
                 const gamesRes = await fetch('./data/games.json');
@@ -136,52 +160,44 @@
             }
         }
 
-        // 3. طباعة الألعاب
         function renderGames(data) {
             const grid = document.getElementById('game-grid');
-            if (!data || data.length === 0) {
-                grid.innerHTML = '<p style="color:#666; font-family:monospace;">> No executable games found.</p>';
-                return;
-            }
+            if (!data || data.length === 0) return;
             grid.innerHTML = data.map(game => `
-                <div class="game-card" onclick="location.hash='game/${game.slug || game.id}'">
+                <div class="game-card" role="button" tabindex="0" onclick="location.hash='game/${game.slug || game.id}'">
                     <h3 style="margin: 0 0 5px 0;">${game.title}</h3>
                     <p style="font-size: 0.85rem; color: #888; margin: 0;">${game.description || 'No description.'}</p>
-                    ${game.category ? `<span class="tag">#${game.category}</span>` : ''}
                 </div>
             `).join('');
         }
 
-        // 4. محرك البحث للألعاب
         document.getElementById('mainSearch').addEventListener('input', (e) => {
             const query = e.target.value.toLowerCase();
             const filteredGames = allGames.filter(g => 
-                (g.title && g.title.toLowerCase().includes(query)) || 
-                (g.category && g.category.toLowerCase().includes(query))
+                (g.title && g.title.toLowerCase().includes(query))
             );
             renderGames(filteredGames);
         });
 
-        // 5. موجه الألعاب (SPA Router)
         window.addEventListener('hashchange', () => {
             const hash = location.hash;
-            
             if(!hash || !hash.startsWith('#game/')) { 
                 homeView.style.display = 'block';
+                homeView.setAttribute('aria-hidden', 'false');
                 detailView.style.display = 'none';
+                detailView.setAttribute('aria-hidden', 'true');
                 window.scrollTo(0, 0);
                 return; 
             }
-            
             const slug = hash.replace('#game/', '');
-            
             homeView.style.display = 'none';
+            homeView.setAttribute('aria-hidden', 'true');
             detailView.style.display = 'block';
+            detailView.setAttribute('aria-hidden', 'false');
             document.getElementById('game-title-display').innerText = `> Initializing: ${slug.toUpperCase()}`;
             window.scrollTo(0, 0);
         });
 
-        // التشغيل التلقائي
         window.addEventListener('DOMContentLoaded', () => {
             bootSystem();
             initData();
