@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pro Gaming Hub | Tech Engine v3</title>
-    <meta name="description" content="Advanced Web Application for premium unblocked gaming experience and technical SEO logs.">
+    <meta name="description" content="Advanced Web Application for premium unblocked gaming experience.">
     
     <style>
         :root { --primary: #ff4500; --dark: #0a0a0a; --text: #ffffff; --card: #151515; --border: #333; }
@@ -13,23 +13,21 @@
         header { padding: 20px; border-bottom: 1px solid var(--border); text-align: center; background: #111; }
         .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
         
+        /* البحث */
         .search-box { margin-top: 15px; }
         .search-box input { width: 80%; max-width: 600px; padding: 12px 20px; border-radius: 25px; border: 1px solid #444; background: #222; color: white; outline: none; font-family: monospace; }
+        .search-box input:focus { border-color: var(--primary); }
         
-        #game-grid, .articles-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; margin-top: 20px; }
+        /* شبكة الألعاب */
+        #game-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; margin-top: 20px; }
         .card { background: var(--card); padding: 20px; border-radius: 10px; border: 1px solid var(--border); cursor: pointer; transition: 0.3s; }
-        .card:hover { border-color: var(--primary); transform: translateY(-5px); }
+        .card:hover { border-color: var(--primary); transform: translateY(-5px); box-shadow: 0 5px 15px rgba(255,69,0,0.15); }
         .card h3 { margin: 0 0 10px 0; color: var(--primary); }
         
-        /* تنسيقات واجهة المقالات */
-        .btn-back { padding: 10px 20px; background: #222; border: 1px solid #444; color: white; border-radius: 5px; cursor: pointer; text-decoration: none; display: inline-block; margin-bottom: 30px; margin-top: 20px; }
+        /* واجهة اللعبة */
+        .btn-back { padding: 10px 20px; background: #222; border: 1px solid #444; color: white; border-radius: 5px; cursor: pointer; text-decoration: none; display: inline-block; margin-bottom: 20px; }
         .btn-back:hover { background: var(--primary); }
-        
-        .seo-article { max-width: 800px; margin: 0 auto; display: none; /* مخفية برمجياً لكن موجودة لـ Google */ }
-        .seo-article h1 { font-size: 2.5rem; color: var(--primary); margin-bottom: 5px; }
-        .seo-article h2 { color: var(--primary); margin-top: 30px; }
-        .seo-article p { font-size: 1.1rem; color: #ddd; line-height: 1.8; }
-        .article-meta { color: #666; font-family: monospace; border-bottom: 1px solid #333; padding-bottom: 20px; margin-top: 0; margin-bottom: 30px; }
+        #game-view { display: none; text-align: center; padding: 40px 20px; }
 
         footer { text-align: center; padding: 40px; color: #666; font-family: monospace; border-top: 1px solid #333; margin-top: 50px; }
     </style>
@@ -39,7 +37,7 @@
     <header>
         <h1>TechEngine<span style="color:var(--primary)">.v3</span></h1>
         <div class="search-box">
-            <input type="text" id="mainSearch" placeholder="> Search Games or Logs..." autocomplete="off">
+            <input type="text" id="mainSearch" placeholder="> Search Games..." autocomplete="off">
         </div>
     </header>
 
@@ -47,113 +45,88 @@
         
         <div id="home-view">
             <h2 style="border-bottom: 1px solid #333; padding-bottom: 10px;">> Available Nodes</h2>
-            <div id="game-grid"></div>
-
-            <h2 style="margin-top: 50px; border-bottom: 1px solid #333; padding-bottom: 10px;">> Technical Logs</h2>
-            <div class="articles-grid">
-                
-                <div class="card" onclick="openArticle('nuclear-seo')">
-                    <h3>Nuclear SEO Strategies</h3>
-                    <p>Why WebAssembly is the future of unblocked gaming SEO.</p>
-                    <small style="color: #666;">April 26, 2026</small>
+            <div id="game-grid">
                 </div>
+        </div>
 
-                <div class="card" onclick="openArticle('bypass-guide')">
-                    <h3>Firewall Bypass Guide</h3>
-                    <p>Advanced methods to access your hub anywhere.</p>
-                    <small style="color: #666;">April 25, 2026</small>
-                </div>
-
+        <div id="game-view">
+            <a href="#" onclick="closeGame()" class="btn-back">← Terminate Session & Return</a>
+            <h1 id="game-title" style="color:var(--primary); margin-bottom: 20px;">> Initializing...</h1>
+            
+            <div style="background: #111; border: 1px solid #333; height: 500px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                <p style="color:#888; font-family: monospace;">Game Iframe / Canvas mounts here</p>
             </div>
         </div>
 
-        <div id="articles-container">
-            
-            <a href="#" id="back-button" onclick="closeArticle()" class="btn-back" style="display: none;">← Back to Hub</a>
-
-            <article id="nuclear-seo" class="seo-article">
-                <h1>Nuclear SEO: Beyond PWA in 2026</h1>
-                <p class="article-meta">Author: Tech Admin | Date: April 26, 2026</p>
-                
-                <p>In 2026, standard SEO is no longer enough. To bypass automatic de-indexing filters, your site must behave like a technical entity.</p>
-                <h2>Why WebAssembly?</h2>
-                <p>By using WebAssembly (WASM) signals and dynamic API simulations, we prove to Google that our 'Unblocked Games' site is a sophisticated application.</p>
-            </article>
-
-            <article id="bypass-guide" class="seo-article">
-                <h1>Firewall Bypass Guide</h1>
-                <p class="article-meta">Author: Tech Admin | Date: April 25, 2026</p>
-                
-                <p>School firewalls are becoming more advanced, but so are bypass methods. Here is how you can access games seamlessly.</p>
-                <h2>Method 1: Proxy Networks</h2>
-                <p>اكتب مقالك الثاني هنا براحة تامة. جوجل الآن يقرأ هذا النص كجزء أصيل من الصفحة.</p>
-            </article>
-
-        </div>
-        </div>
+    </div>
 
     <footer>System Status: Online | Powered by GitHub Edge</footer>
 
     <script>
-        // 1. وظيفة فتح المقال (إخفاء الرئيسية وإظهار المقال المطلوب فقط)
-        function openArticle(articleId) {
-            const targetArticle = document.getElementById(articleId);
-            
-            if (targetArticle) {
-                // إخفاء الواجهة الرئيسية
-                document.getElementById('home-view').style.display = 'none';
-                
-                // إظهار زر العودة
-                document.getElementById('back-button').style.display = 'inline-block';
-                
-                // إخفاء جميع المقالات أولاً (لتنظيف الشاشة)
-                const allArticles = document.querySelectorAll('.seo-article');
-                allArticles.forEach(a => a.style.display = 'none');
-                
-                // إظهار المقال المطلوب فقط
-                targetArticle.style.display = 'block';
-                
-                // تعديل الرابط والصعود للأعلى
-                location.hash = 'post/' + articleId;
-                window.scrollTo(0,0);
-            }
-        }
+        let allGames = [];
 
-        // 2. وظيفة العودة للرئيسية
-        function closeArticle() {
-            document.getElementById('home-view').style.display = 'block';
-            document.getElementById('back-button').style.display = 'none';
-            
-            const allArticles = document.querySelectorAll('.seo-article');
-            allArticles.forEach(a => a.style.display = 'none');
-            
-            location.hash = ''; // مسح الرابط
-        }
-
-        // 3. جلب الألعاب
+        // 1. جلب الألعاب من ملف JSON
         async function loadGames() {
             try {
                 const res = await fetch('./data/games.json');
-                const games = await res.json();
-                const grid = document.getElementById('game-grid');
-                grid.innerHTML = games.map(g => `
-                    <div class="card" onclick="location.hash='game/${g.slug || g.id}'">
-                        <h3>${g.title}</h3>
-                        <p style="color: #aaa; font-size: 0.9rem;">${g.description}</p>
-                    </div>
-                `).join('');
-            } catch (e) { console.log("Game data offline"); }
+                allGames = await res.json();
+                renderGames(allGames);
+            } catch (e) {
+                console.error("Game data error", e);
+                document.getElementById('game-grid').innerHTML = "<p style='color:red;'>Failed to load games data.</p>";
+            }
         }
 
-        // 4. التشغيل عند فتح الموقع
+        // 2. طباعة كروت الألعاب
+        function renderGames(games) {
+            const grid = document.getElementById('game-grid');
+            if (games.length === 0) {
+                grid.innerHTML = '<p style="color:#666;">No games found.</p>';
+                return;
+            }
+            grid.innerHTML = games.map(g => `
+                <div class="card" onclick="openGame('${g.slug || g.id}', '${g.title}')">
+                    <h3>${g.title}</h3>
+                    <p style="color: #aaa; font-size: 0.9rem; margin: 0;">${g.description}</p>
+                </div>
+            `).join('');
+        }
+
+        // 3. محرك البحث الخاص بالألعاب فقط
+        document.getElementById('mainSearch').addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase();
+            const filtered = allGames.filter(g => 
+                (g.title && g.title.toLowerCase().includes(query)) || 
+                (g.category && g.category.toLowerCase().includes(query))
+            );
+            renderGames(filtered);
+        });
+
+        // 4. فتح اللعبة
+        function openGame(slug, title) {
+            document.getElementById('home-view').style.display = 'none';
+            document.getElementById('game-view').style.display = 'block';
+            document.getElementById('game-title').innerText = '> Executing: ' + title;
+            
+            location.hash = 'game/' + slug;
+            window.scrollTo(0, 0);
+        }
+
+        // 5. إغلاق اللعبة والعودة
+        function closeGame() {
+            document.getElementById('home-view').style.display = 'block';
+            document.getElementById('game-view').style.display = 'none';
+            location.hash = '';
+        }
+
+        // 6. التشغيل عند التحميل
         window.onload = () => {
             loadGames();
             
-            // قراءة الرابط المباشر
             const hash = location.hash.replace('#', '');
-            if (hash.startsWith('post/')) {
-                const articleId = hash.replace('post/', '');
-                openArticle(articleId);
+            if (hash.startsWith('game/')) {
+                const slug = hash.replace('game/', '');
+                openGame(slug, slug.toUpperCase());
             }
         };
     </script>
