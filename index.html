@@ -12,20 +12,16 @@
         header { padding: 20px; border-bottom: 1px solid var(--border); text-align: center; background: #111; }
         .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
         
-        /* شبكة البطاقات (ألعاب ومقالات) */
-        .grid-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; margin-top: 20px; }
+        /* شبكة الألعاب */
+        #game-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; margin-top: 20px; }
         .card { background: var(--card); padding: 20px; border-radius: 10px; border: 1px solid var(--border); cursor: pointer; transition: 0.3s; }
         .card:hover { border-color: var(--primary); transform: translateY(-5px); }
         .card h3 { margin: 0 0 10px 0; color: var(--primary); }
         
-        /* أزرار وتنسيقات المقال */
-        .btn-back { padding: 10px 20px; background: #222; border: 1px solid #444; color: white; border-radius: 5px; cursor: pointer; text-decoration: none; display: inline-block; margin-bottom: 20px; }
-        .btn-back:hover { background: var(--primary); }
-        
-        /* إخفاء المقالات في البداية */
-        .article-content { display: none; max-width: 800px; margin: 0 auto; padding: 20px; }
-        .article-content h1 { color: var(--primary); font-size: 2.5rem; margin-bottom: 10px; }
-        .article-content p { color: #ddd; font-size: 1.1rem; line-height: 1.8; }
+        /* تنسيق صندوق المقال الثابت */
+        .static-article { background: var(--card); padding: 40px; border-radius: 10px; border: 1px solid var(--border); margin-top: 50px; }
+        .static-article h1 { color: var(--primary); font-size: 2.2rem; margin-top: 0; }
+        .static-article p { color: #ddd; font-size: 1.1rem; line-height: 1.8; }
         
         footer { text-align: center; padding: 40px; color: #666; border-top: 1px solid #333; margin-top: 50px; }
     </style>
@@ -38,82 +34,39 @@
 
     <div class="container">
         
-        <div id="home-view">
+        <h2 style="border-bottom: 1px solid #333; padding-bottom: 10px;">> Available Nodes</h2>
+        <div id="game-grid"></div>
+
+        <article class="static-article">
+            <h1>Nuclear SEO Strategies 2026</h1>
+            <p style="color: #666; border-bottom: 1px solid #333; padding-bottom: 10px;">Author: Tech Admin | Date: April 26, 2026</p>
             
-            <h2 style="border-bottom: 1px solid #333; padding-bottom: 10px;">> Technical Logs (المقالات)</h2>
-            <div class="grid-container">
-                
-                <div class="card" onclick="openArticle('post-1')">
-                    <h3>Nuclear SEO Strategies</h3>
-                    <p style="color: #aaa; font-size: 0.9rem;">اضغط هنا لقراءة المقال الأول...</p>
-                </div>
-
-                <div class="card" onclick="openArticle('post-2')">
-                    <h3>كيف تتخطى الحجب</h3>
-                    <p style="color: #aaa; font-size: 0.9rem;">اضغط هنا لقراءة المقال الثاني...</p>
-                </div>
-
-            </div>
-
-        </div>
-
-        <a href="#" id="back-btn" onclick="closeArticle()" class="btn-back" style="display: none;">← عودة للرئيسية</a>
-
-        <div id="post-1" class="article-content">
-            <h1>Nuclear SEO Strategies</h1>
-            <p style="color: #666; border-bottom: 1px solid #333; padding-bottom: 10px;">بتاريخ: 28 أبريل 2026</p>
-            
-            <p>هنا تكتب نص المقال الأول براحتك.</p>
-            <p>يمكنك إضافة أي عدد تريده من الفقرات (p) أو العناوين (h2).</p>
-            <p>جوجل سيفهم هذا النص فوراً لأنه مكتوب مباشرة داخل الـ HTML ولا يتم سحبه من أي مكان آخر.</p>
-        </div>
-
-        <div id="post-2" class="article-content">
-            <h1>كيف تتخطى الحجب في المدارس</h1>
-            <p style="color: #666; border-bottom: 1px solid #333; padding-bottom: 10px;">بتاريخ: 25 أبريل 2026</p>
-            
-            <p>اكتب محتوى المقال الثاني هنا.</p>
-            <p>هذا النص ثابت وموجود في الصفحة، والجافاسكريبت فقط يقوم بإظهاره وإخفائه.</p>
-        </div>
+            <p>هذا النص موجود مباشرة في الصفحة. لا توجد أي أزرار أو استدعاءات.</p>
+            <p>مجرد أن يفتح الزائر الموقع وينزل للأسفل، سيجد هذا المقال أمامه.</p>
+            <p>امسح هذا النص واكتب مقالك الطويل هنا براحة تامة، وسيقوم جوجل بفهرسته مباشرة.</p>
+        </article>
 
         </div>
 
     <footer>System Status: Online | Static Mode</footer>
 
     <script>
-        // دالة لفتح المقال المطلوب وإخفاء الباقي
-        function openArticle(articleId) {
-            // إخفاء الرئيسية
-            document.getElementById('home-view').style.display = 'none';
-            // إظهار زر العودة
-            document.getElementById('back-btn').style.display = 'inline-block';
-            
-            // إخفاء كل المقالات أولاً للتأكد أن الشاشة نظيفة
-            const allArticles = document.querySelectorAll('.article-content');
-            allArticles.forEach(article => {
-                article.style.display = 'none';
-            });
-            
-            // إظهار المقال الذي ضغط عليه الزائر فقط
-            document.getElementById(articleId).style.display = 'block';
-            
-            // رفع الشاشة للأعلى
-            window.scrollTo(0, 0);
+        // الكود هنا يخص الألعاب فقط، تم مسح كل ما يخص المقالات
+        async function loadGames() {
+            try {
+                const res = await fetch('./data/games.json');
+                const games = await res.json();
+                const grid = document.getElementById('game-grid');
+                grid.innerHTML = games.map(g => `
+                    <div class="card" onclick="location.hash='game/${g.slug || g.id}'">
+                        <h3>${g.title}</h3>
+                        <p style="color: #aaa; font-size: 0.9rem; margin: 0;">${g.description}</p>
+                    </div>
+                `).join('');
+            } catch (e) { console.log("Game data offline"); }
         }
 
-        // دالة لإغلاق المقال والعودة للرئيسية
-        function closeArticle() {
-            // إظهار الرئيسية
-            document.getElementById('home-view').style.display = 'block';
-            // إخفاء زر العودة
-            document.getElementById('back-btn').style.display = 'none';
-            
-            // إخفاء جميع المقالات
-            const allArticles = document.querySelectorAll('.article-content');
-            allArticles.forEach(article => {
-                article.style.display = 'none';
-            });
-        }
+        window.onload = loadGames;
     </script>
 </body>
 </html>
