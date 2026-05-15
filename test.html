@@ -44,13 +44,9 @@
         .search-box input:focus { border-color: var(--primary); box-shadow: 0 0 10px rgba(255,69,0,0.2); }
         
         #game-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; padding: 20px; max-width: 1200px; margin: 0 auto; width: 100%; box-sizing: border-box; }
-        .game-card { background: var(--card); padding: 0; border-radius: 8px; border: 1px solid var(--border); transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden; }
+        .game-card { background: var(--card); padding: 15px; border-radius: 8px; border: 1px solid var(--border); transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden; }
         .game-card:hover { border-color: var(--primary); transform: translateY(-5px); box-shadow: 0 5px 15px rgba(255,69,0,0.15); }
         
-        /* NEW IMAGE STYLES */
-        .game-card img { width: 100%; height: 140px; object-fit: cover; border-bottom: 1px solid var(--border); }
-        .game-card-content { padding: 15px; }
-
         .loading-signal { color: var(--primary); font-family: monospace; text-align: center; padding: 40px; font-size: 1.2rem; }
         
         .seo-article-container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
@@ -60,9 +56,11 @@
         .static-article p { color: #ddd; font-size: 1.1rem; line-height: 1.8; }
         .static-article ul { color: #ddd; }
         
-        /* BANNER IMAGE IN ARTICLE */
-        .article-banner { width: 100%; max-height: 300px; object-fit: cover; border-radius: 8px; margin-bottom: 20px; }
-
+        /* تصميم مخصص لصورة المقال الثابتة */
+        .article-image-link { display: block; margin-bottom: 25px; text-align: center; }
+        .article-image-link img { max-width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--border); transition: 0.3s; }
+        .article-image-link img:hover { border-color: var(--primary); box-shadow: 0 0 15px rgba(255,69,0,0.2); }
+        
         footer { margin-top: auto; padding: 20px; text-align: center; font-size: 0.8rem; color: #666; border-top: 1px solid var(--border); font-family: monospace; background: #0a0a0a; }
         .btn { padding: 10px 20px; background: #222; border: 1px solid #444; color: white; border-radius: 5px; cursor: pointer; transition: 0.2s; font-family: inherit; margin-bottom: 20px;}
         .btn:hover { background: var(--primary); border-color: var(--primary); }
@@ -98,17 +96,42 @@
                         </p>
                         
                         <div itemprop="articleBody">
-                            <!-- PLACE 1: IMAGE WITH LINK IN THE ARTICLE -->
-                            <a href="https://example.com/play-now">
-                                <img src="https://via.placeholder.com/1200x400?text=Steal+A+Brainrot+Gameplay" alt="Steal a Brainrot Gameplay" class="article-banner">
-                            </a>
 
-                            <p>Look, we’ve all been there. You’re sitting in a third-period study hall, the flickering fluorescent lights are killing your vibe, and you’ve already finished your assignments.</p>
+                            <!-- ========================================== -->
+                            <!-- المكان المخصص لإضافة الصورة والرابط يدوياً -->
+                            <!-- ========================================== -->
+                            <a href="ضع_رابط_المقال_هنا" class="article-image-link">
+                                <img src="ضع_رابط_الصورة_هنا" alt="Steal a Brainrot Unblocked Banner">
+                            </a>
+                            <!-- ========================================== -->
+
+                            <p>Look, we’ve all been there. You’re sitting in a third-period study hall, the flickering fluorescent lights are killing your vibe, and you’ve already finished your assignments. You want to play something, but the school firewall is tighter than a drum.</p>
                             
-                            <p>The truth is, finding a way to play <strong>Steal a Brainrot unblocked</strong> can be a massive headache. But if you want to dive into the chaotic world of "Brainrot" without your Chromebook turning into a space heater, I've got the lowdown.</p>
+                            <p>The truth is, finding a way to play <strong>Steal a Brainrot unblocked</strong> can be a massive headache. Most "unblocked" sites are just laggy mirrors filled with sketchy pop-ups. But if you want to dive into the chaotic, meme-filled world of "Brainrot" without your Chromebook turning into a space heater, I've got the lowdown on how to do it right.</p>
 
                             <h2>What is Steal a Brainrot Anyway?</h2>
-                            <p>It’s a fast-paced, often nonsensical heist game where you’re trying to secure "brainrot" items—basically the internet's most cursed memes.</p>
+                            <p>If you aren’t familiar with the absolute fever dream that is this game, here is the deal: it’s a fast-paced, often nonsensical heist game where you’re trying to secure "brainrot" items—basically the internet's most cursed memes—while avoiding obstacles. It’s loud, it’s weird, and it’s surprisingly addictive.</p>
+
+                            <h2>How to Access the G+ Version (No Lag)</h2>
+                            <p>The "G Plus" (G+) version is generally the gold standard for school Chromebooks because it’s optimized for low-spec hardware. Here is how I usually get it running:</p>
+                            <ul>
+                                <li><strong>Find a Reliable Host:</strong> Don't just Google "unblocked games" and click the first link. Look for GitHub-hosted mirrors or dedicated "G Plus" directories. These usually bypass standard filters.</li>
+                                <li><strong>Clear Your Cache:</strong> If the game is stuck on a loading screen, a quick refresh (Ctrl+R) usually fixes asset loading issues.</li>
+                                <li><strong>Toggle Fullscreen:</strong> Use the dedicated fullscreen key on your Chromebook to prevent frame drops caused by browser UI rendering.</li>
+                            </ul>
+
+                            <h2>My Personal Hacks for Staying "Under the Radar"</h2>
+                            <p>I’ve spent plenty of time testing these sites on restricted networks, and I've picked up a few tricks:</p>
+                            <ul>
+                                <li><strong>The Mute Button:</strong> One "Skibidi" sound bit and your teacher will be at your desk. Mute the tab immediately.</li>
+                                <li><strong>The "Panic" Tab:</strong> Keep a Google Doc open in the next tab. Use <code>Ctrl + Tab</code> to switch instantly.</li>
+                                <li><strong>Check the URL:</strong> Avoid random strings of numbers; stick to official G+ mirrors for stability.</li>
+                            </ul>
+
+                            <h2>Why Does it Lag on Chromebooks?</h2>
+                            <p>To keep things smooth, close your other tabs (even that history presentation) and turn off "Battery Saver," as it throttles your CPU. Also, using a mouse is a game-changer for precision heist moves.</p>
+
+                            <p><strong>Ready to start the heist?</strong> Head over to the official mirror and see if you can actually manage to steal the brainrot without lagging out. Good luck!</p>
                         </div>
                     </article>
                 </section>
@@ -125,8 +148,23 @@
         </main>
 
         <footer role="contentinfo">
-            <!-- Footer remains same -->
-            <p>&copy; 2026 Brainrot Unblocked.</p>
+            <div style="margin-bottom: 20px;">
+                <a href="about.html" style="color: #888; text-decoration: none; margin: 0 12px; font-size: 0.9rem; transition: color 0.3s;">About Us</a>
+                <span style="color: #333;">|</span>
+                <a href="privacy.html" style="color: #888; text-decoration: none; margin: 0 12px; font-size: 0.9rem; transition: color 0.3s;">Privacy Policy</a>
+                <span style="color: #333;">|</span>
+                <a href="dmca.html" style="color: #888; text-decoration: none; margin: 0 12px; font-size: 0.9rem; transition: color 0.3s;">DMCA</a>
+            </div>
+
+            <div style="font-size: 0.8rem; color: #555; font-family: monospace;">
+                Status: <span id="api-status" style="color: var(--primary);">Online</span> | 
+                Protocol: <span style="color: var(--primary);">HTTPS/V3</span> | 
+                Client: <span id="client-info" style="color: #888;">Detecting...</span>
+            </div>
+            
+            <p style="font-size: 0.75rem; color: #444; margin-top: 15px;">
+                &copy; 2026 Brainrot Unblocked. All rights reserved. Access authorized.
+            </p>
         </footer>
     </div>
 
@@ -137,7 +175,22 @@
         const statusIndicator = document.getElementById('status-indicator');
 
         async function bootSystem() {
-            // ... (keep your existing bootSystem code)
+            try {
+                const minimalWasmBytes = new Uint8Array([0, 97, 115, 109, 1, 0, 0, 0]);
+                await WebAssembly.instantiate(minimalWasmBytes);
+                document.getElementById('api-status').innerHTML = "Kernel Verified <span style='color:#4CAF50'>[WASM: Online]</span>";
+            } catch (e) {
+                document.getElementById('api-status').innerText = "WASM Fallback Active";
+            }
+
+            const clientInfoSpan = document.getElementById('client-info');
+            if (navigator.userAgentData) {
+                const isMobile = navigator.userAgentData.mobile ? "Mobile" : "Desktop";
+                const primaryBrand = navigator.userAgentData.brands[0]?.brand || "Unknown";
+                clientInfoSpan.innerText = `${isMobile} / ${primaryBrand}`;
+            } else {
+                clientInfoSpan.innerText = "Legacy Client";
+            }
         }
 
         async function initData() {
@@ -148,31 +201,26 @@
                 renderGames(allGames);
             } catch (error) {
                 console.error("Data Engine Error:", error);
-                // For demo if local fetch fails:
-                allGames = [{id: 1, title: "Steal a Brainrot", slug: "steal-brainrot", description: "The ultimate heist.", image: "https://via.placeholder.com/300x150"}];
-                renderGames(allGames);
+                statusIndicator.innerHTML = "<span style='color:red;'>> System Error: Failed to load game nodes.</span>";
             }
         }
 
-        // PLACE 2: IMAGE ADDED TO DYNAMIC GAME CARDS
         function renderGames(data) {
             const grid = document.getElementById('game-grid');
             if (!data || data.length === 0) return;
             grid.innerHTML = data.map(game => `
                 <div class="game-card" role="button" tabindex="0" onclick="location.hash='game/${game.slug || game.id}'">
-                    <img src="${game.image || 'https://via.placeholder.com/220x140?text=No+Preview'}" alt="${game.title}">
-                    <div class="game-card-content">
-                        <h3 style="margin: 0 0 5px 0;">${game.title}</h3>
-                        <p style="font-size: 0.85rem; color: #888; margin: 0;">${game.description || 'No description.'}</p>
-                    </div>
+                    <h3 style="margin: 0 0 5px 0;">${game.title}</h3>
+                    <p style="font-size: 0.85rem; color: #888; margin: 0;">${game.description || 'No description.'}</p>
                 </div>
             `).join('');
         }
 
-        // ... (keep the rest of your listeners)
         document.getElementById('mainSearch').addEventListener('input', (e) => {
             const query = e.target.value.toLowerCase();
-            const filteredGames = allGames.filter(g => (g.title && g.title.toLowerCase().includes(query)));
+            const filteredGames = allGames.filter(g => 
+                (g.title && g.title.toLowerCase().includes(query))
+            );
             renderGames(filteredGames);
         });
 
@@ -181,12 +229,14 @@
             if(!hash || !hash.startsWith('#game/')) { 
                 homeView.style.display = 'block';
                 detailView.style.display = 'none';
+                window.scrollTo(0, 0);
                 return; 
             }
             const slug = hash.replace('#game/', '');
             homeView.style.display = 'none';
             detailView.style.display = 'block';
             document.getElementById('game-title-display').innerText = `> Initializing: ${slug.toUpperCase()}`;
+            window.scrollTo(0, 0);
         });
 
         window.addEventListener('DOMContentLoaded', () => {
