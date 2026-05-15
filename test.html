@@ -56,10 +56,17 @@
         .static-article p { color: #ddd; font-size: 1.1rem; line-height: 1.8; }
         .static-article ul { color: #ddd; }
         
-        /* تصميم مخصص لصورة المقال الثابتة */
-        .article-image-link { display: block; margin-bottom: 25px; text-align: center; }
+        /* تنسيق مخصص للصورة المرتبطة برابط */
+        .article-image-link { display: block; margin: 25px 0; text-align: center; }
         .article-image-link img { max-width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--border); transition: 0.3s; }
         .article-image-link img:hover { border-color: var(--primary); box-shadow: 0 0 15px rgba(255,69,0,0.2); }
+
+        /* تنسيق قائمة المقالات الداخلية */
+        .internal-articles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 20px; }
+        .article-link-card { background: #141414; padding: 15px; border-radius: 6px; border: 1px solid #252525; text-decoration: none; color: #ddd; transition: 0.2s; }
+        .article-link-card:hover { border-color: var(--primary); color: #fff; background: #1a1a1a; }
+        .article-link-card h4 { margin: 0 0 5px 0; color: var(--primary); }
+        .article-link-card p { margin: 0; font-size: 0.85rem; color: #888; }
         
         footer { margin-top: auto; padding: 20px; text-align: center; font-size: 0.8rem; color: #666; border-top: 1px solid var(--border); font-family: monospace; background: #0a0a0a; }
         .btn { padding: 10px 20px; background: #222; border: 1px solid #444; color: white; border-radius: 5px; cursor: pointer; transition: 0.2s; font-family: inherit; margin-bottom: 20px;}
@@ -97,13 +104,13 @@
                         
                         <div itemprop="articleBody">
 
-                            <!-- ========================================== -->
-                            <!-- المكان المخصص لإضافة الصورة والرابط يدوياً -->
-                            <!-- ========================================== -->
-                            <a href="ضع_رابط_المقال_هنا" class="article-image-link">
-                                <img src="ضع_رابط_الصورة_هنا" alt="Steal a Brainrot Unblocked Banner">
+                            <!-- ======================================================= -->
+                            <!--  مكان إضافة الصورة مع الرابط (يمكن توجيهها لأي مقال تريده) -->
+                            <!-- ======================================================= -->
+                            <a href="unblocked-games-g-plus.html" class="article-image-link">
+                                <img src="ضع_رابط_الصورة_هنا" alt="Steal a Brainrot Unblocked Official Guide Banner">
                             </a>
-                            <!-- ========================================== -->
+                            <!-- ======================================================= -->
 
                             <p>Look, we’ve all been there. You’re sitting in a third-period study hall, the flickering fluorescent lights are killing your vibe, and you’ve already finished your assignments. You want to play something, but the school firewall is tighter than a drum.</p>
                             
@@ -111,6 +118,35 @@
 
                             <h2>What is Steal a Brainrot Anyway?</h2>
                             <p>If you aren’t familiar with the absolute fever dream that is this game, here is the deal: it’s a fast-paced, often nonsensical heist game where you’re trying to secure "brainrot" items—basically the internet's most cursed memes—while avoiding obstacles. It’s loud, it’s weird, and it’s surprisingly addictive.</p>
+
+                            <!-- ======================================================= -->
+                            <!--   قسم المقالات المضافة من الـ Repository (Internal Links) -->
+                            <!-- ======================================================= -->
+                            <h2>Related Content & Premium Directories</h2>
+                            <p>Explore our dedicated setups, strategic tips, and alternative game hubs directly through our verified clean directories:</p>
+                            
+                            <div class="internal-articles-grid">
+                                <a href="Steal-a-Brainrot-tips.html" class="article-link-card">
+                                    <h4>System Tips & Strategy</h4>
+                                    <p>Read our technical optimization guide for Steal-a-Brainrot.</p>
+                                </a>
+                                
+                                <a href="unblocked-games-g-plus.html" class="article-link-card">
+                                    <h4>G+ Games Directory</h4>
+                                    <p>Access the core Google Plus unblocked cloud index.</p>
+                                </a>
+                                
+                                <a href="unblocked-games-premium.html" class="article-link-card">
+                                    <h4>Premium Unblocked Hub</h4>
+                                    <p>High-speed, mirror-backed premium titles with fast delivery.</p>
+                                </a>
+                                
+                                <a href="classroom-games-unblocked.html" class="article-link-card">
+                                    <h4>Classroom Games Index</h4>
+                                    <p>The ultimate repository curated specifically for school environments.</p>
+                                </a>
+                            </div>
+                            <!-- ======================================================= -->
 
                             <h2>How to Access the G+ Version (No Lag)</h2>
                             <p>The "G Plus" (G+) version is generally the gold standard for school Chromebooks because it’s optimized for low-spec hardware. Here is how I usually get it running:</p>
