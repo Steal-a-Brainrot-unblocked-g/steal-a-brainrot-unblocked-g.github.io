@@ -1,0 +1,14 @@
+# الكود مخصص لجميع محركات البحث (جوجل، بينج، إلخ)
+User-agent: *
+
+# السماح بأرشفة جميع الصفحات، المقالات، والصور
+Allow: /
+Allow: /data/
+Allow: /images/
+
+# منع أرشفة ملفات النظام الداخلية أو السجلات إذا وجدت (اختياري)
+Disallow: /admin/
+Disallow: /config/
+
+# أضف رابط خريطة الموقع الخاصة بك هنا لمساعدة جوجل على الزحف الأسرع
+Sitemap: https://steal-a-brainrot-unblocked-g.github.io/sitemap.xml
