@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#1a1a1a">
+    
+    <title>Steal a Brainrot Unblocked - Official G+ Version</title>
+    <meta name="description" content="Play Steal a Brainrot unblocked on any school Chromebook. Access the official Unblocked Games G Plus version with no lag, full screen, and instant loading. Start playing now!">
+    
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:;">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "@id": "https://steal-a-brainrot-unblocked-g.github.io/#app",
+          "name": "Steal a Brainrot Unblocked",
+          "operatingSystem": "All",
+          "applicationCategory": "GameApplication"
+        },
+        {
+          "@type": "TechArticle",
+          "@id": "https://steal-a-brainrot-unblocked-g.github.io/#article",
+          "headline": "Steal a Brainrot Unblocked - Play Official G+ Version (No Lag)",
+          "description": "The ultimate guide to playing Steal a Brainrot unblocked on Chromebooks using the G Plus version for lag-free gaming.",
+          "author": { "@type": "Organization", "name": "Brainrot Heist Crew" },
+          "isPartOf": { "@id": "https://steal-a-brainrot-unblocked-g.github.io/#app" }
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        :root { --primary: #ff4500; --dark: #0a0a0a; --text: #ffffff; --card: #151515; --border: #333; }
+        body { background: var(--dark); color: var(--text); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; line-height: 1.6; }
+        #app-shell { display: flex; flex-direction: column; min-height: 100vh; }
+        
+        header { padding: 20px; border-bottom: 1px solid var(--border); text-align: center; background: #111; }
+        .search-box { margin-top: 15px; }
+        .search-box input { width: 80%; max-width: 600px; padding: 12px 20px; border-radius: 25px; border: 1px solid #444; background: #222; color: white; outline: none; transition: 0.3s; font-family: monospace; }
+        .search-box input:focus { border-color: var(--primary); box-shadow: 0 0 10px rgba(255,69,0,0.2); }
+        
+        #game-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; padding: 20px; max-width: 1200px; margin: 0 auto; width: 100%; box-sizing: border-box; }
+        .game-card { background: var(--card); padding: 0; border-radius: 8px; border: 1px solid var(--border); transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden; }
+        .game-card:hover { border-color: var(--primary); transform: translateY(-5px); box-shadow: 0 5px 15px rgba(255,69,0,0.15); }
+        
+        /* NEW IMAGE STYLES */
+        .game-card img { width: 100%; height: 140px; object-fit: cover; border-bottom: 1px solid var(--border); }
+        .game-card-content { padding: 15px; }
+
+        .loading-signal { color: var(--primary); font-family: monospace; text-align: center; padding: 40px; font-size: 1.2rem; }
+        
+        .seo-article-container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+        .static-article { background: #0f0f0f; padding: 40px; border-radius: 12px; border: 1px solid var(--border); border-left: 4px solid var(--primary); }
+        .static-article h1 { color: var(--primary); font-size: 2.2rem; margin-top: 0; margin-bottom: 5px; }
+        .static-article h2 { color: var(--primary); margin-top: 25px; }
+        .static-article p { color: #ddd; font-size: 1.1rem; line-height: 1.8; }
+        .static-article ul { color: #ddd; }
+        
+        /* BANNER IMAGE IN ARTICLE */
+        .article-banner { width: 100%; max-height: 300px; object-fit: cover; border-radius: 8px; margin-bottom: 20px; }
+
+        footer { margin-top: auto; padding: 20px; text-align: center; font-size: 0.8rem; color: #666; border-top: 1px solid var(--border); font-family: monospace; background: #0a0a0a; }
+        .btn { padding: 10px 20px; background: #222; border: 1px solid #444; color: white; border-radius: 5px; cursor: pointer; transition: 0.2s; font-family: inherit; margin-bottom: 20px;}
+        .btn:hover { background: var(--primary); border-color: var(--primary); }
+    </style>
+</head>
+<body>
+
+    <div id="app-shell" role="application">
+        <header role="banner">
+            <h1 style="margin: 0; font-weight: 800; letter-spacing: -1px;">
+                BRAINROT<span style="color:var(--primary)">.v3</span>
+            </h1>
+            <div class="search-box">
+                <input type="text" id="mainSearch" placeholder="> Search Games..." autocomplete="off">
+            </div>
+        </header>
+
+        <main id="main-content" role="main">
+            
+            <div id="home-view">
+                <div id="status-indicator" class="loading-signal">> Initializing Core Engine & Fetching Nodes...</div>
+                
+                <div id="game-grid" role="grid"></div>
+
+                <section class="seo-article-container" aria-labelledby="article-heading">
+                    <article class="static-article" itemscope itemtype="http://schema.org/TechArticle">
+                        <meta itemprop="inLanguage" content="en-US"> 
+                        <h1 id="article-heading" itemprop="headline">Steal a Brainrot Unblocked - Play Official G+ Version (No Lag)</h1>
+                        
+                        <p style="color: #666; font-family: monospace; border-bottom: 1px solid #333; padding-bottom: 15px; margin-top: 0;">
+                            Author: <span itemprop="author">Admin</span> | Date: May 2026
+                            <meta itemprop="datePublished" content="2026-05-01"> 
+                        </p>
+                        
+                        <div itemprop="articleBody">
+                            <!-- PLACE 1: IMAGE WITH LINK IN THE ARTICLE -->
+                            <a href="https://example.com/play-now">
+                                <img src="https://via.placeholder.com/1200x400?text=Steal+A+Brainrot+Gameplay" alt="Steal a Brainrot Gameplay" class="article-banner">
+                            </a>
+
+                            <p>Look, we’ve all been there. You’re sitting in a third-period study hall, the flickering fluorescent lights are killing your vibe, and you’ve already finished your assignments.</p>
+                            
+                            <p>The truth is, finding a way to play <strong>Steal a Brainrot unblocked</strong> can be a massive headache. But if you want to dive into the chaotic world of "Brainrot" without your Chromebook turning into a space heater, I've got the lowdown.</p>
+
+                            <h2>What is Steal a Brainrot Anyway?</h2>
+                            <p>It’s a fast-paced, often nonsensical heist game where you’re trying to secure "brainrot" items—basically the internet's most cursed memes.</p>
+                        </div>
+                    </article>
+                </section>
+            </div>
+
+            <div id="detail-view" style="display: none; padding: 40px 20px; max-width: 1000px; margin: 0 auto; width: 100%; box-sizing: border-box;">
+                <button class="btn" onclick="location.hash=''">← Terminate Session</button>
+                <div style="text-align:center; padding: 50px; background: #111; border: 1px solid #333; border-radius: 8px;">
+                    <h1 id="game-title-display" style="color:var(--primary);">> Initializing Environment</h1>
+                    <p style="color:#888; font-family: monospace;">WebGL Canvas mounts here.</p>
+                </div>
+            </div>
+
+        </main>
+
+        <footer role="contentinfo">
+            <!-- Footer remains same -->
+            <p>&copy; 2026 Brainrot Unblocked.</p>
+        </footer>
+    </div>
+
+    <script>
+        let allGames = [];
+        const homeView = document.getElementById('home-view');
+        const detailView = document.getElementById('detail-view');
+        const statusIndicator = document.getElementById('status-indicator');
+
+        async function bootSystem() {
+            // ... (keep your existing bootSystem code)
+        }
+
+        async function initData() {
+            try {
+                const gamesRes = await fetch('./data/games.json');
+                allGames = await gamesRes.json();
+                statusIndicator.style.display = 'none';
+                renderGames(allGames);
+            } catch (error) {
+                console.error("Data Engine Error:", error);
+                // For demo if local fetch fails:
+                allGames = [{id: 1, title: "Steal a Brainrot", slug: "steal-brainrot", description: "The ultimate heist.", image: "https://via.placeholder.com/300x150"}];
+                renderGames(allGames);
+            }
+        }
+
+        // PLACE 2: IMAGE ADDED TO DYNAMIC GAME CARDS
+        function renderGames(data) {
+            const grid = document.getElementById('game-grid');
+            if (!data || data.length === 0) return;
+            grid.innerHTML = data.map(game => `
+                <div class="game-card" role="button" tabindex="0" onclick="location.hash='game/${game.slug || game.id}'">
+                    <img src="${game.image || 'https://via.placeholder.com/220x140?text=No+Preview'}" alt="${game.title}">
+                    <div class="game-card-content">
+                        <h3 style="margin: 0 0 5px 0;">${game.title}</h3>
+                        <p style="font-size: 0.85rem; color: #888; margin: 0;">${game.description || 'No description.'}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // ... (keep the rest of your listeners)
+        document.getElementById('mainSearch').addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase();
+            const filteredGames = allGames.filter(g => (g.title && g.title.toLowerCase().includes(query)));
+            renderGames(filteredGames);
+        });
+
+        window.addEventListener('hashchange', () => {
+            const hash = location.hash;
+            if(!hash || !hash.startsWith('#game/')) { 
+                homeView.style.display = 'block';
+                detailView.style.display = 'none';
+                return; 
+            }
+            const slug = hash.replace('#game/', '');
+            homeView.style.display = 'none';
+            detailView.style.display = 'block';
+            document.getElementById('game-title-display').innerText = `> Initializing: ${slug.toUpperCase()}`;
+        });
+
+        window.addEventListener('DOMContentLoaded', () => {
+            bootSystem();
+            initData();
+            if(location.hash) window.dispatchEvent(new Event('hashchange'));
+        });
+    </script>
+</body>
+</html>
